@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      padding-bottom: 110px;
+      font-size: large;
+    }
+
+    .title {
+      margin-top: 50px;
+    }
+  </style>
+  <title>DOM Project</title>
+</head>
+
+<body>
+
+  <!-- Exercisess -->
+  <!-- <input class="js-input2" type="text" placeholder="Type something.." onkeydown="
+  const inputElement = document.querySelector('.js-input2');
+  document.querySelector('.js-message').innerHTML = inputElement.value;">
+  <p class="js-message"></p>
+
+  <input type="text" class="js-input" onkeydown="handleCostKeydownN(event);"> <button
+    onclick="calculate()">calculate</button>
+  <p class="cost"></p>
+
+  <button>9a</button>
+  <button class="nine-b" onclick="pressed();">9b</button>
+  <p><button onclick="move('heads')">heads</button> <button onclick="move('tails')">tails</button></p>
+  <p class="result">
+
+  </p> -->
+  <!-- Exercisess -->
+
+  <p>YouTube Subscribe Button</p>
+  <button class="js-subscribe-button" onclick="
+  subscribe();
+  ">Subscribe</button>
+  <br>
+  <br>
+  <p>Rock Paper Scissors</p>
+  <a href="09-rock-paper-scissors.html">Click Here</a>
+  <br><br>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+  <input class="js-cost-input" placeholder="Cost of order" onkeydown="handleCostKeydown();">
+  <button onclick="calculateTotal();">Calculate</button>
+  <p class="js-total-cost"></p>
+  <br><br>
+  <a href="">CSS version of these projects</a>
+
+
+  <script>
+
+    // Exercises 
+
+    // function handleCostKeydownN(event) {
+    //   if (event.key === 'Enter') {
+    //     calculate();
+    //   }
+    // }
+    // function calculate() {
+    //   const inputElement = document.querySelector('.js-input');
+    //   let cost = Number(inputElement.value) * 100
+    //   if (cost < 4000) {
+    //     cost += 1000;
+    //   }
+    //   document.querySelector('.result').innerText = '$' + (cost / 100);
+    // }
+
+
+
+    // console.log(document.querySelector('button'));
+    // function pressed() {
+    //   document.querySelector(".nine-b").innerHTML = '9b done!';
+    // };
+    // function move(move) {
+    //   if (move === 'heads') {
+    //     document.querySelector(".result").innerHTML = `Your chose: ${move}`;
+    //   } else if (move === 'tails') {
+    //     document.querySelector(".result").innerHTML = `Your chose: ${move}`;
+    //   }
+    // }
+
+
+    // String(25);
+    // console.log('25' - 5);
+    // console.log('25' + 5);
+    // window.console.log('asd')
+    // Exercises 
+
+    function handleCostKeydown() {
+      console.log(event.key);
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = Number(inputElement.value);
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector('.js-total-cost').innerHTML = '$' + cost;
+    };
+
+    function subscribe() {
+      const buttonElement = document.querySelector('.js-subscribe-button');
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+      }
+      else {
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+  </script>
+</body>
+
+</html>

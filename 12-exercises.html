@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises</title>
+</head>
+
+<body>
+  <button class="js-start" onclick="clickd();">Start</button>
+  <script>
+    // Exercise 1
+    // const add = function () {
+    //   console.log(2 + 3);
+    // };
+    // add(); add();
+    // // Exercise 2
+    // function runTwice(run) {
+    //   run();
+    //   run();
+
+    // } runTwice(add);
+    // Exercise 3
+    // function clickd() {
+    //   const buttonStart = document.querySelector('.js-start');
+    //   if (buttonStart.innerHTML === 'Start') {
+    //     setTimeout(function () {
+    //       buttonStart.innerHTML = 'Finished!';
+    //     }, 1000);
+    //   }
+
+    //   else {
+    //     setTimeout(function () {
+    //       buttonStart.innerHTML = 'Start';
+    //     }, 1000);
+
+    //   }
+    // }
+    // // Exercise 4
+    function clickd() {
+      const buttonStart = document.querySelector('.js-start');
+      if (buttonStart.innerHTML === 'Start') {
+        buttonStart.innerText = 'Loading...';
+        setTimeout(function () {
+          buttonStart.innerHTML = 'Finished!';
+        }, 1000);
+      }
+
+      else {
+        buttonStart.innerText = 'Loading...';
+        setTimeout(function () {
+          buttonStart.innerHTML = 'Start';
+        }, 1000);
+
+      }
+    }
+    // Exercise 5 (12f)
+
+  </script>
+</body>
+
+</html>

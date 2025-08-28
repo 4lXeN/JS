@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+
+  <body>
+    <button onclick="" class="js-button">Click</button>
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+      const eventListener = () => console.log("click");
+      buttonElement.addEventListener("click", eventListener); // bu method 2 parametre alır;
+
+      buttonElement.removeEventListener("click", eventListener); // bu methodlar onclick yerine kullanılır.
+
+      buttonElement.addEventListener("click", () => console.log("click2"));
+
+      // 15. gün
+      /* greeting(); // hello
+    function greeting() {
+      console.log('hello');
+    }
+    // her fonksiyonun bir değeri vardır. Değerler boolean, string, number vb şeyler olabilir.
+    const num = 2; // num değişkenine değer atadık.
+
+    // function1(); // Burada Uncaught ReferenceError hatası verir. çünkü fonksiyonlar bir değerdi ve atama işlemi gerçeklemediğinden greeting fonksiyonu gibi normal bir şekilde tanımlanmadığından bu hatayı verir.
+    const function1 = function greeting() {
+      console.log('hello2');
+    }; //fonksiyon1 değişkenine bir fonksiyon atamış olduk. son yapılan 2 işlemde de değer ataması yapılmış oldu. 
+    console.log(function1); //fonksiyonun kendisini yazdırır
+    console.log(typeof function1); // function
+    function1(); // hello2 
+    // kopyalanan fonksiyonu çağırdık
+
+    const function2 = function () {
+      console.log('hello3');
+    }// burda bilinmeyen(isimsiz) bir fonksiyon(anonymous function) ataması yapılmış oldu
+    function2(); // hello3
+
+    const object1 = {
+      num: 2,
+      fun: function greeting() {
+        console.log('hello4');
+      }
+    }; // Obje içine 2 değer tanımladık.
+    object1.fun(); // hello4
+    // noktalı gösterimde metod çağırmış olduk.
+
+    // Bir değerle neler yapabiliriz.
+    // -fonksiyondan bir değer geçirebiliriz
+    // -
+
+    function display(param) {
+      console.log(param);
+    }
+    display(2); // fonksiyondan değer geçmiş oldu.
+
+    function run(param) {
+      param();
+    }
+    run(function () {
+      console.log('hello5');
+    }); // Fonksiyonla başka bir değer olan fonksiyon geçmiş oldu.
+ */
+      /*   // şimdi kullanılan metod setTimeout, bu metod 1 parametre yapılan işi 2. parametre ise milisaniye cinsinden beklenilecek süreyi temsil eder.
+      setTimeout(function () {
+        console.log('time out');
+        console.log('time out2');
+      }, 3000); // JavaScript’te bir fonksiyonu belirli bir süre sonra çalıştırmak için kullanılan yerleşik (built-in) bir zamanlayıcı fonksiyondur. Bu method senkronize bir koddur.
+  
+      console.log('next line'); //bu method asenkronize (eşzamansız) bir koddur.
+      // Asenkronize kodlar bir sonraki satıra geçmeden önce bir satırın bitmesini beklemez.
+      // Senkronize kodlar bir sonraki satıra geçmeden önce bir satırın bitmesini bekler.
+      // Asenkron kodların avantajları diğer kod bloklarını belli bir süre engellemez.
+  
+      setInterval(function () {
+        console.log('interval');
+      }, 3000); // yine setTimeout ile aynı 2 parmaetreyi alır. 'setTimeout' dan farklı olarak gelecekteki t birim süre bu olayı tekrar eder.
+  
+      console.log('next line 2'); */
+
+      // [
+      //   'yemek yap',
+      //   'bulaşıkları yıka',
+      //   'film izle',
+      // ].forEach((value, index) => {
+      //   if (value === 'bulaşıkları yıka') {
+      //     return; // burada for döngüsündeki continur ile aynı işlevi görür.
+      //   }
+      //   console.log(index);
+      //   console.log(value);
+      // }); // forEach() bir dizide döngü oluşturmanın tercih edilen yoludur. for döngüsüne göre daha basittir. Daha sonra todo uygulamasına for döngüsü yerine foerEach kullanılarak pekiştirildi.
+      // ayrıca break kullanmamız gerekiyorsa for döngüsünde kullanmamız uygun olur.
+
+      /*  // 16. gün
+    // Ok Fonksiyonlar
+    // Ok fonksiyonlar fonksiyonları daha kısa yazmamızı sağlar. Aralarındaki tek fark 'function' kelimesi ile '=>' dir.
+    const arrowFunction = () => {
+      console.log('hello');
+    };
+    arrowFunction();
+    const function1 = function () {
+      console.log('hello2');
+    };
+    function1();
+    // iki türlü de parametre veya geri dönüş sağlanabilir. 
+    const oneParam = param => {
+      console.log(param + 1);
+    }// parametre varken '()' kullanımı opsiyoneldir.
+    oneParam(2); // 3
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+    // eğer parametre tek satırsa 'return' kullanımı ve '{}' opsiyoneldir. örnekte olduğu gibi.
+
+    // Aynı zamanda objelerin içinde de ok gösterimli fonksiyonu kullanabiliriz.
+    const object2 = {
+      method: () => {
+        Ok gösterimli fonksiyon bu şekilde de gösterilir.
+      },
+      method() {
+        // bu kullanım okuması daha kolay olduğundan daha çok önerilir.
+      }
+    } */
+    </script>
+  </body>
+</html>

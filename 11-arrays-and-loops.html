@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array and Loops</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <p></p>
+
+  <script>
+    /* const array1 = [
+      10,
+      20,
+      30,
+    ]
+    console.log(array1);
+    array1[0] = 99;
+    console.log(array1);
+
+    [1, 'hello', true, { name: 'socks' }, [1, 2]]
+
+    console.log(typeof [1, 2]);
+    console.log(Array.isArray([1, 2]));
+
+    console.log(array1.lenght);
+
+    array1.push(100);
+    console.log(array1);
+
+    array1.splice(0, 1);
+    console.log(array1); */
+
+    /* let i = 1;
+    while (i <= 5) {
+      console.log(i);
+      i++;
+    }
+    for (let i = 1; i <= 5; i++) {
+
+    }
+    let randomNumber = 0;
+    while (randomNumber < 0.5) {
+      randomNumber = Math.random();
+      console.log(randomNumber);
+    } */
+    /* const todoList = [
+      'make dinner',
+      'wash dishes',
+    ];
+    for (let i = 0; i < todoList.length; i++) {
+      const element = todoList[i];
+      console.log(element);
+    } */
+    /*  const nums = [1, 1, 3];
+     let total = 0;
+     for (let i = 0; i < nums.length; i++) {
+       const num = nums[i];
+       total += num;
+
+     }
+     console.log(total);
+
+     const numsDoubled = [];
+
+     for (let i = 0; i < nums.length; i++) {
+       const num = nums[i];
+       // numsDoubled.push(num * 2);
+       numsDoubled[i] = num * 2;
+
+     }
+     console.log(numsDoubled); */
+
+    /*  const array1 = [1, 2, 3];
+     const array2 = array1.slice();
+     array2.push(4);
+     console.log(array1);
+     console.log(array2);
+
+     const [firstValue, secondValue] = [1, 2, 3];
+     for (let i = 0; i <= 10; i++) {
+       if (i % 3 === 0) { continue; }
+       console.log(i);
+       if (i === 8) break; // döngüden erken çıkmamızı sağlar.
+     }
+
+     let i = 1;
+
+     while (i < 10) {
+       if (i % 3 === 0) { i++; continue; }
+       console.log(i);
+       i++;
+     } */
+
+    /*  function doubleArray(nums) {
+       const numsDoubled = [];
+
+       for (let i = 0; i < nums.length; i++) {
+         const num = nums[i];
+         if (num === 0) {
+           break;
+         }
+         // numsDoubled.push(num * 2);
+         numsDoubled[i] = num * 2;
+
+       }
+       return numsDoubled;
+     }
+     console.log(doubleArray([1, 2, 3, 4]));
+     console.log(doubleArray([2, 2, 4, 0, 4])); */
+
+    //  // Exercise 1
+    //  let strings = ['hello', 'world', 'search', 'good'];
+
+    //  for (let i = 0; strings.length < i; i++) {
+    //   if (strings[i] === 'search') {
+    //     console.log(i);
+    //   } else {
+    //     console.log(-1);
+    //   }
+    // }
+    // // Exercise 2
+    // let strings = ['hello', 'world', 'search', 'good'];
+    // function findWords(arr, word) {
+
+    //   let index = -1;
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (word === arr[i]) index = i;
+    //   }
+    //   console.log(index);
+    // }
+    // findWords(strings, 'asdsa');
+    // Exercise 3
+    // function removeEgg(foods) {
+    //   const result = [];
+    //   for (let i = 0; i < foods.length; i++) {
+    //     if (foods[i] === 'egg') {
+    //       continue;
+    //     }
+    //     result.push(foods[i]);
+    //   }
+    //   return result;
+    // }
+    // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    // // Exercise 4
+    // function removeEgg(foods) {
+    //   let removeCount = 2;
+    //   const result = [];
+    //   for (let i = 0; i < foods.length; i++) {
+    //     if (foods[i] === 'egg' && removeCount > 0) {
+    //       removeCount--;
+    //       continue;
+    //     } result.push(foods[i]);
+    //   }
+
+    //   return result;
+    // }
+    // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham', 'egg']));
+    //  // Exercise 5
+    // Bu egzersizde reverse metodunu da kullanabiliriz
+    // function removeLastEgg(foods) {
+    //   let removeCount = 2;
+    //   const result = [];
+    //   for (let i = foods.length - 1; i >= 0; i--) {
+    //     if (foods[i] === 'egg' && removeCount > 0) {
+    //       removeCount--;
+    //       continue;
+    //     } result.push(foods[i]);
+    //     console.log(i);
+    //   }
+
+    //   return result;
+    // }
+    // console.log(removeLastEgg(['egg', 'apple', 'egg', 'egg', 'ham', 'egg']));
+
+    // Exercise 6
+    // const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+    // function removeEgg(foods) {
+    //   const foodsCopy = foods.slice();
+    //   const reversedFoods = foodsCopy.reverse();
+    //   console.log(foodsCopy);
+    //   const result = [];
+    //   let eggsRemoved = 0;
+    //   for (let i = 0; i < reversedFoods.length; i++) {
+    //     if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+    //       eggsRemoved++;
+    //       continue;
+    //     }
+    //     result.push(reversedFoods[i]);
+    //   }
+    //   return result.reverse();
+    // }
+
+    // // Exercise 7
+    // for (let i = 1; i <= 20; i++) {
+    //   let number = String(i);
+    //   if (number % 3 === 0 && number % 5 === 0) { number = 'FizzBuzz'; }
+    //   else if (number % 3 === 0) number = 'Fizz';
+    //   else if (number % 5 === 0) number = 'Buzz';
+    //   console.log(number);
+    // }
+
+    // Exercise 8
+    const colors = ['blue', 'green', 'red', 'yellow', 'blue']
+
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+    function unique(array) {
+      const result = [];
+      for (let i = 0; i < array.length; i++) {
+        const word = array[i];
+
+        if (findIndex(result, word) === -1) {
+          result.push(word);
+        }
+      }
+      return result;
+
+    }
+
+    const colors2 = ['green', 'blue', 'purple'];
+    colors2.push(...colors);
+    console.log(colors2);
+    console.log(colors);
+
+    console.log(unique(colors2))
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises</title>
+</head>
+
+<body>
+  <script>
+    const fruit = ['apple', 'banana', 'pear'];
+    // //Exercise 1
+    // const nums = [10, 20, 30];
+    // nums[2] = 99;
+    // console.log(nums);
+    // // Exercise 2
+    // function getLastValue(array) {
+    //   console.log(array.length)
+    //   lastIndex = array[array.length - 1];
+    //   console.log(lastIndex);
+    // }
+    // getLastValue(fruit);
+    // // Exercise 3
+    // function swapArray(arr) {
+    //   a = arr[0]; b = arr[arr.length - 1];
+    //   arr[0] = b; arr[arr.length - 1] = a;
+    //   // console.log(arr);
+    // }
+    // swapArray(fruit);
+    // console.log(fruit);
+    // // Exercise 4
+    // function countPerDouble() {
+    //   let i = 0;
+    //   while (i < 10) {
+    //     a = i * 2
+    //     if (a <= 10) {
+    //       console.log(a);
+    //     }
+    //     i++;
+    //   }
+    // }
+    // countPerDouble();
+    // // Exercise 5
+    // function loop() {
+    //   let a = 0;
+    //   while (a < 5) {
+    //     a++;
+    //     console.log(a);
+    //   }
+    // } loop();
+    // // Exercise 6
+    arr = [1, 2, 3, 4, 5, 6];
+    arr2 = [-2, -1, 0, 1, 2,];
+    // function addOne(arr) {
+    //   for (i = 0; i < arr.length; i++) {
+    //     arr[i]++;
+    //     console.log(i);
+    //   };
+    // } addOne(arr); console.log(arr);
+    // addOne(arr2); console.log(arr2);
+    // // Exercise 7
+    // function addNum(array, a) {
+    //   for (i = 0; i < array.length; i++) {
+    //     array[i] += a;
+    //   }
+    // } addNum(arr, 3); console.log(arr);
+    // // Exercise 8
+    // const arrSum = [];
+    // function addArrays(arr1, arr2) {
+    //   let length;
+    //   if (arr1.length <= arr2.length) {
+    //     length = arr1.length;
+    //   } else {
+    //     length = arr2.length;
+    //   }
+    //   for (i = 0; i < length; i++) {
+    //     console.log(length);
+    //     arrSum.push(arr1[i] + arr2[i]);
+    //   }
+    // } addArrays(arr, arr2); console.log(arrSum);
+    // // Exercise 9
+    // function countPositive(arr) {
+    //   let count = 0;
+    //   for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] > 0) {
+    //       count++;
+    //     }
+    //   }
+    //   return count;
+    // } console.log(countPositive(arr2));
+    // Exercise 10
+    // function minMax(arr) {
+    //   let result = {
+    //     min: arr[0],
+    //     max: arr[0]
+    //   };
+    //   for (let i = 0; i < arr.length; i++) {
+    //     const value = arr[i];
+    //     if (value < result.min) {
+    //       result.min = value;
+    //     } if (value > result.max) {
+    //       result.max = value;
+    //     }
+    //   }
+    //   // console.log(`Max: ${result.max} \nMin: ${result.min}`);
+    //   // return result;
+    //   console.log(`min: ${result.min}, max: ${result.max}`);
+    // } console.log(minMax(arr2));
+    // minMax([3, 3]);
+    // // Exercise 11
+    // function maxMin(arr) {
+    //   let result = {
+    //     max: null,
+    //     min: null
+    //   }
+    //   for (let i = 0; i < arr.length; i++) {
+    //     const value = arr[i];
+    //     if (result.min === null || result.min > value) {
+    //       result.min = value;
+    //     }
+    //     if (result.max === null || result.max < value) {
+    //       result.max = value;
+    //     }
+    //   } return result;
+    // }
+    // console.log(maxMin(arr2));
+    // console.log(maxMin([]));
+    // Exercie 12
+    function countWords(words) {
+      const result = {};
+
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        if (!result[word]) {
+          result[word] = 1
+        } else {
+          result[word]++;
+        }
+      }
+      return result;
+    }
+    console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+  </script>
+</body>
+
+</html>

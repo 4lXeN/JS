@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .toggle-button {
+      background-color: rgb(230, 230, 230);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .is-toggle {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="js-1 toggle-button" onclick="clicked(this)">Gaming</button>
+  <button class="js-2 toggle-button" onclick="clicked(this)">Music</button>
+  <button class="js-3 toggle-button" onclick="clicked(this)">Tech</button>
+  <script>
+    function clicked(clickedButton) {
+      const buttons = document.querySelectorAll('.toggle-button');
+      buttons.forEach(button => {
+        button.classList.remove('is-toggle');
+      });
+      clickedButton.classList.add('is-toggle');
+    }
+
+  </script>
+</body>
+
+</html>
