@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let isProcessing = false;
+
+      function doWork() {
+        if (isProcessing) {
+          return;
+        }
+        isProcessing = true;
+        console.log("islem basladi...");
+
+        setTimeout(() => {
+          console.log("islem bitti...");
+          isProcessing = false;
+        }, 1000);
+      }
+      doWork();
+      doWork(); // 2. çağrı boş döner, çünkü ilk daha devam ediyor
+    </script>
+  </body>
+</html>

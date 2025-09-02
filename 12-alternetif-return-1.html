@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let isDisplayNotification = false;
+
+      function showNotification(message) {
+        if (isDisplayNotification) {
+          console.log("Zaten bildirim gösteriliyor!");
+          return;
+        }
+        isDisplayNotification = true;
+        console.log("📢 " + message);
+
+        setTimeout(() => {
+          isDisplayNotification = false;
+          console.log("🔕 Bildirimler kapandı.");
+        }, 2000);
+      }
+      showNotification("Merhaba Dünya!");
+      showNotification("Merhaba Dünya!");
+    </script>
+  </body>
+</html>
